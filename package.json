@@ -1,20 +1,22 @@
 {
-  "name": "icaf-frontend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "parcel index.html"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "parcel": "^2.0.0-beta.3.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-feather": "^2.0.9",
-    "react-icons": "^4.2.0",
-    "react-router-dom": "^5.2.0",
-    "reactstrap": "^8.9.0"
-  }
+    "name": "icaf-frontend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "parcel index.html"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@lottiefiles/react-lottie-player": "^3.3.1",
+        "axios": "^0.21.1",
+        "parcel": "^2.0.0-beta.3.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-feather": "^2.0.9",
+        "react-icons": "^4.2.0",
+        "react-router-dom": "^5.2.0",
+        "reactstrap": "^8.9.0"
+    }
 }

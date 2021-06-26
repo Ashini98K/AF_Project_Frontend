@@ -1,0 +1,322 @@
+.topic{
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 96px;
+    line-height: 114px;
+
+    padding-top: 3rem;
+}
+
+.subTopic{
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.login{
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 57px;
+    text-align: right;
+
+    padding-top: 10rem;
+}
+
+.instructions{
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: right;
+}
+
+.inputfield{
+    width:60vh;
+    height: 7vh;
+    margin-top: 1rem;
+    margin-left: 10rem;
+    top: 502px;
+    background: #EDEDED;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 60px;
+    padding-left: 2rem;
+}
+
+.mailIcon{
+    position: absolute;
+    left: 8.33%;
+    right: 8.33%;
+    top: 8.33%;
+    bottom: 8.33%;
+}
+
+
+.topic {
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 96px;
+    line-height: 114px;
+    padding-top: 0rem;
+}
+
+.subTopic {
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.register {
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 57px;
+    text-align: right;
+    padding-top: 8rem;
+}
+
+.instructions {
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: right;
+}
+
+.inputfield {
+    width: 60vh;
+    height: 7vh;
+    margin-top: 1rem;
+    margin-left: 10rem;
+    top: 502px;
+    background: #EDEDED;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 60px;
+    padding-left: 2rem;
+    font-family: Share;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 41px;
+    /* identical to box height */
+    text-align: left;
+    color: #2B2B2B;
+}
+
+.inputfield:hover {
+    background: rgba(185, 172, 238, 0.63);
+    color: #2B2B2B;
+}
+
+.mailIcon {
+    position: absolute;
+    left: 8.33%;
+    right: 8.33%;
+    top: 8.33%;
+    bottom: 8.33%;
+}
+
+.registerButton {
+    width: 150px;
+    height: 40px;
+    margin-top: 4vh;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 93px;
+    font-family: Share;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    text-align: center;
+}
+
+.registerButton:hover {
+    background: #341E71;
+    color: #FFFFFF;
+}
+
+.loginbtn {
+    width: 150px;
+    height: 40px;
+    margin-top: 4vh;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 93px;
+    font-family: Share;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    text-align: center;
+}
+
+.loginbtn:hover {
+    background: #341E71;
+    color: #FFFFFF;
+}
+
+.imagebackground {
+    width: 600px;
+    height: 398px;
+}
+.userTypeMainTopic {
+    font-family: Baloo Thambi;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 111px;
+    color: #000000;
+}
+
+.subTopic {
+    font-family: Basic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 45px;
+    color: #898989;
+}
+
+.userButtonWorkshop {
+    width: 300px;
+    height: 300px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 5vh;
+    border: 5px solid rgba(191, 191, 191, 0.52);
+    background-image: url('https://media.giphy.com/media/DCMZYL14SScKmQrWjK/giphy.gif');
+    background-position: center;
+    backface-visibility: hidden;
+}
+
+.userButtonResearch {
+    width: 300px;
+    height: 300px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 5vh;
+    border: 5px solid rgba(191, 191, 191, 0.52);
+    background-image: url('https://media.giphy.com/media/26FPC5oAdfeFPkQQE/giphy.gif');
+    background-position: center;
+    backface-visibility: hidden;
+}
+
+.userButtonAttendee {
+    width: 300px;
+    height: 300px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 5vh;
+    border: 5px solid rgba(191, 191, 191, 0.52);
+    background-image: url('https://media.giphy.com/media/CHJuwLeJvKpp6wRirX/giphy.gif');
+    background-position: center;
+    backface-visibility: hidden;
+}
+
+.userLabel {
+    font-family: Basic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    color: #000000;
+    margin-top: 6.5vh;
+    line-height: 150%;
+    margin-right: 40px;
+    display: block;
+    text-align: center;
+}
+.imageStyle {
+    width: 155;
+    height: 155px;
+    margin-top: 2vh;
+    border: 2px solid #A3A3A3;
+    box-sizing: border-box;
+}
+
+.topic {
+    font-family: Baloo Thambi;
+    font-style: normal;
+    font-size: 72px;
+    line-height: 111px;
+    /* identical to box height */
+    color: #000000;
+    margin-left: 50px;
+}
+
+.researchInput {
+    margin-top: 5vh;
+    width: 900px;
+    height: 50px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 40px;
+    color: #000000;
+    background: #EBE8E8;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.researchtextarea {
+    margin-top: 5vh;
+    width: 900px;
+    height: 250px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 40px;
+    color: #000000;
+    background: #EBE8E8;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.researchfile {
+    margin-top: 5vh;
+    width: 500px;
+    height: 40px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 40px;
+    color: #000000;
+    background: #EBE8E8;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.submitbtn {
+    width: 150px;
+    height: 40px;
+    margin-top: 5vh;
+    margin-left: 25vh;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 93px;
+    font-family: Share;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    text-align: center;
+}
+
+.submitbtn:hover {
+    background: #341E71;
+    color: #FFFFFF;
+}
+/*# sourceMappingURL=index.4c3a389e.css.map */
