@@ -130,9 +130,18 @@ class Register extends Component {
 
               <row className="d-flex justify-content-between">
                 <Col sm="1"></Col>
-                <button className="loginbtn">
+                {/* <button className="loginbtn">
                   <span className="btnTxt">Login</span>
-                </button>
+                </button> */}
+                <a
+                  href="#"
+                  className="loginbtn"
+                  // onClick={() => {
+                  //   this.handleClick;
+                  // }}
+                >
+                  Login
+                </a>
                 <button
                   type="submit"
                   className="registerButton"

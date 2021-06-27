@@ -48626,26 +48626,20 @@ class Register extends _react.Component {
                 lineNumber: 132
             },
             __self: this
-        }), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+        }), /*#__PURE__*/ _reactDefault.default.createElement("a", {
+            href: "#",
             className: "loginbtn",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
-                lineNumber: 133
+                lineNumber: 136
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
-            className: "btnTxt",
-            __source: {
-                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
-                lineNumber: 134
-            },
-            __self: this
-        }, "Login")), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+        }, "Login"), /*#__PURE__*/ _reactDefault.default.createElement("button", {
             type: "submit",
             className: "registerButton",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
-                lineNumber: 136
+                lineNumber: 145
             },
             __self: this
         }, "Register")))))));
