@@ -12,7 +12,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
-    line-height: 29px;
+    line-height: 20px;
 }
 
 .register {
@@ -22,7 +22,7 @@
     font-size: 48px;
     line-height: 57px;
     text-align: right;
-    padding-top: 8rem;
+    padding-top: 7rem;
 }
 
 .instructions {

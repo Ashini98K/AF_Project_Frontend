@@ -15,6 +15,7 @@ class UserType extends Component {
 
     this.navigateToResearch = this.navigateToResearch.bind(this);
     this.navigateWorkshop = this.navigateWorkshop.bind(this);
+    this.navigateToPayment = this.navigateToPayment.bind(this);
     this.onSUbmit = this.onSUbmit.bind(this);
   }
 
@@ -47,6 +48,7 @@ class UserType extends Component {
       console.log("researcher true");
     } else {
       console.log("attendee true");
+      this.navigateToPayment(e);
     }
   }
 
@@ -56,6 +58,10 @@ class UserType extends Component {
 
   navigateToResearch(e, id) {
     window.location = `/research-upload/${id}`;
+  }
+
+  navigateToPayment(e) {
+    window.location = `/payment-gateway`;
   }
 
   render() {

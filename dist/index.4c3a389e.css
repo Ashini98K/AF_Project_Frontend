@@ -71,7 +71,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
-    line-height: 29px;
+    line-height: 20px;
 }
 
 .register {
@@ -81,7 +81,7 @@
     font-size: 48px;
     line-height: 57px;
     text-align: right;
-    padding-top: 8rem;
+    padding-top: 7rem;
 }
 
 .instructions {
@@ -239,10 +239,9 @@
     text-align: center;
 }
 .imageStyle {
-    width: 155;
-    height: 155px;
+    width: 160;
+    height: 160px;
     margin-top: 2vh;
-    border: 2px solid #A3A3A3;
     box-sizing: border-box;
 }
 
@@ -319,4 +318,52 @@
     background: #341E71;
     color: #FFFFFF;
 }
+.paymentTopic {
+    padding-top: 50pt;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    color: #000000;
+}
+
+.mainTopic {
+    margin-top: 50pt;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 120px;
+    line-height: 90px;
+    color: #00A3FF;
+}
+
+.imagestyle {
+    width: 640px;
+    height: 620px;
+}
+
+.paybtn {
+    width: 200px;
+    height: 100px;
+    border-radius: 539px;
+}
+/* oleo-script-swash-caps-latin-ext-400-normal*/
+@font-face {
+  font-family: 'Oleo Script Swash Caps';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('oleo-script-swash-caps-latin-ext-400-normal.431d0a48.woff2') format('woff2'), url('oleo-script-swash-caps-all-400-normal.f15a2681.woff') format('woff');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* oleo-script-swash-caps-latin-400-normal*/
+@font-face {
+  font-family: 'Oleo Script Swash Caps';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('oleo-script-swash-caps-latin-400-normal.bb5b385c.woff2') format('woff2'), url('oleo-script-swash-caps-all-400-normal.f15a2681.woff') format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /*# sourceMappingURL=index.4c3a389e.css.map */

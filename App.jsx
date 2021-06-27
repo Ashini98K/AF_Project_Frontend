@@ -5,12 +5,14 @@ import Register from "./src/IT19136134/Components/Register/register";
 import UserType from "./src/IT19136134/Components/Register/user-type";
 import ResearchUplaod from "./src/IT19136134/Components/DocumentUploads/research";
 import WorkShopPresentationUpload from "./src/IT19136134/Components/DocumentUploads/workshop-presentation";
+import Payment from "./src/IT19136134/Components/Payment/payment";
 
 function App() {
   return (
     <div>
       <Router>
         <Switch>
+          <Route path="/payment-gateway" component={Payment}></Route>
           <Route
             path="/workshop-presentation/:id"
             component={WorkShopPresentationUpload}

@@ -21855,31 +21855,41 @@ var _research = require("./src/IT19136134/Components/DocumentUploads/research");
 var _researchDefault = parcelHelpers.interopDefault(_research);
 var _workshopPresentation = require("./src/IT19136134/Components/DocumentUploads/workshop-presentation");
 var _workshopPresentationDefault = parcelHelpers.interopDefault(_workshopPresentation);
+var _payment = require("./src/IT19136134/Components/Payment/payment");
+var _paymentDefault = parcelHelpers.interopDefault(_payment);
 function App() {
     return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
-        __source: {
-            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\App.jsx",
-            lineNumber: 11
-        },
-        __self: this
-    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
         __source: {
             fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\App.jsx",
             lineNumber: 12
         },
         __self: this
-    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Switch, {
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
         __source: {
             fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\App.jsx",
             lineNumber: 13
         },
         __self: this
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Switch, {
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\App.jsx",
+            lineNumber: 14
+        },
+        __self: this
     }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+        path: "/payment-gateway",
+        component: _paymentDefault.default,
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\App.jsx",
+            lineNumber: 15
+        },
+        __self: this
+    }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
         path: "/workshop-presentation/:id",
         component: _workshopPresentationDefault.default,
         __source: {
             fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\App.jsx",
-            lineNumber: 14
+            lineNumber: 16
         },
         __self: this
     }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -21887,7 +21897,7 @@ function App() {
         component: _researchDefault.default,
         __source: {
             fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\App.jsx",
-            lineNumber: 18
+            lineNumber: 20
         },
         __self: this
     }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -21895,7 +21905,7 @@ function App() {
         component: _userTypeDefault.default,
         __source: {
             fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\App.jsx",
-            lineNumber: 19
+            lineNumber: 21
         },
         __self: this
     }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -21903,7 +21913,7 @@ function App() {
         component: _registerDefault.default,
         __source: {
             fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\App.jsx",
-            lineNumber: 20
+            lineNumber: 22
         },
         __self: this
     })))));
@@ -21918,7 +21928,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","react-router-dom":"1PMSK","./src/IT19135830/Login/Login":"7klps","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./src/IT19136134/Components/Register/register":"6X368","./src/IT19136134/Components/Register/user-type":"3jkqu","./src/IT19136134/Components/DocumentUploads/research":"3oHUw","./src/IT19136134/Components/DocumentUploads/workshop-presentation":"1mmh1"}],"1PMSK":[function(require,module,exports) {
+},{"react":"3b2NM","react-router-dom":"1PMSK","./src/IT19135830/Login/Login":"7klps","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./src/IT19136134/Components/Register/register":"6X368","./src/IT19136134/Components/Register/user-type":"3jkqu","./src/IT19136134/Components/DocumentUploads/research":"3oHUw","./src/IT19136134/Components/DocumentUploads/workshop-presentation":"1mmh1","./src/IT19136134/Components/Payment/payment":"4ADjK"}],"1PMSK":[function(require,module,exports) {
 "use strict";
 module.exports = require("./cjs/react-router-dom.js");
 
@@ -48568,6 +48578,7 @@ class Register extends _react.Component {
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "email",
             className: "inputfield",
             placeholder: "Email",
             name: "email",
@@ -48579,6 +48590,7 @@ class Register extends _react.Component {
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "number",
             className: "inputfield",
             placeholder: "Contact Number",
             name: "contactNo",
@@ -48586,7 +48598,7 @@ class Register extends _react.Component {
             onChange: this.onChange,
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
-                lineNumber: 114
+                lineNumber: 115
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement("input", {
@@ -48597,35 +48609,35 @@ class Register extends _react.Component {
             onChange: this.onChange,
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
-                lineNumber: 121
+                lineNumber: 123
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement("row", {
             className: "d-flex justify-content-between",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
-                lineNumber: 129
+                lineNumber: 131
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
             sm: "1",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
-                lineNumber: 130
+                lineNumber: 132
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement("button", {
             className: "loginbtn",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
-                lineNumber: 131
+                lineNumber: 133
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
             className: "btnTxt",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
-                lineNumber: 132
+                lineNumber: 134
             },
             __self: this
         }, "Login")), /*#__PURE__*/ _reactDefault.default.createElement("button", {
@@ -48633,7 +48645,7 @@ class Register extends _react.Component {
             className: "registerButton",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
-                lineNumber: 134
+                lineNumber: 136
             },
             __self: this
         }, "Register")))))));
@@ -57393,6 +57405,7 @@ class UserType extends _react.Component {
         };
         this.navigateToResearch = this.navigateToResearch.bind(this);
         this.navigateWorkshop = this.navigateWorkshop.bind(this);
+        this.navigateToPayment = this.navigateToPayment.bind(this);
         this.onSUbmit = this.onSUbmit.bind(this);
     }
     componentDidMount() {
@@ -57417,7 +57430,10 @@ class UserType extends _react.Component {
         } else if (userType.type == "RESEARCHER") {
             this.navigateToResearch(e, this.state.id);
             console.log("researcher true");
-        } else console.log("attendee true");
+        } else {
+            console.log("attendee true");
+            this.navigateToPayment(e);
+        }
     }
     navigateWorkshop(e, id) {
         window.location = `/workshop-presentation/${id}`;
@@ -57425,41 +57441,17 @@ class UserType extends _react.Component {
     navigateToResearch(e, id) {
         window.location = `/research-upload/${id}`;
     }
+    navigateToPayment(e) {
+        window.location = `/payment-gateway`;
+    }
     render() {
         return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 63
+                lineNumber: 69
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Row, {
-            __source: {
-                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 64
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
-            sm: "1",
-            __source: {
-                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 65
-            },
-            __self: this
-        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
-            sm: "6",
-            __source: {
-                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 66
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
-            className: "userTypeMainTopic",
-            __source: {
-                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 67
-            },
-            __self: this
-        }, "What are you ?"))), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Row, {
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
                 lineNumber: 70
@@ -57473,45 +57465,72 @@ class UserType extends _react.Component {
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
-            sm: "10",
-            className: "subTopic",
+            sm: "6",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
                 lineNumber: 72
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            className: "userTypeMainTopic",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
                 lineNumber: 73
             },
             __self: this
-        }, "What you will be doing in this conference. Please select one of the below to continue")), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
-            sm: "1",
+        }, "What are you ?"))), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Row, {
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 78
-            },
-            __self: this
-        })), /*#__PURE__*/ _reactDefault.default.createElement("row", {
-            className: "d-flex justify-content-between",
-            __source: {
-                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 80
+                lineNumber: 76
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
             sm: "1",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 81
+                lineNumber: 77
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "10",
+            className: "subTopic",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 78
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 79
+            },
+            __self: this
+        }, "What you will be doing in this conference. Please select one of the below to continue")), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "1",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 84
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("row", {
+            className: "d-flex justify-content-between",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 86
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "1",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
+                lineNumber: 87
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
             sm: "10",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 82
+                lineNumber: 88
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
@@ -57521,7 +57540,7 @@ class UserType extends _react.Component {
             onClick: this.onSUbmit,
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 83
+                lineNumber: 89
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement("button", {
@@ -57531,7 +57550,7 @@ class UserType extends _react.Component {
             onClick: this.onSUbmit,
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 89
+                lineNumber: 95
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement("button", {
@@ -57541,77 +57560,77 @@ class UserType extends _react.Component {
             onClick: this.onSUbmit,
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 95
+                lineNumber: 101
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
             sm: "1",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 102
+                lineNumber: 108
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Row, {
             className: "d-flex justify-content-between",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 104
+                lineNumber: 110
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
             sm: "1",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 105
+                lineNumber: 111
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
             sm: "3",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 106
+                lineNumber: 112
             },
             __self: this
         }, " ", /*#__PURE__*/ _reactDefault.default.createElement("label", {
             className: "userLabel",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 108
+                lineNumber: 114
             },
             __self: this
         }, "Workshop presenter")), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
             sm: "3",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 110
+                lineNumber: 116
             },
             __self: this
         }, " ", /*#__PURE__*/ _reactDefault.default.createElement("label", {
             className: "userLabel",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 112
+                lineNumber: 118
             },
             __self: this
         }, "Researcher")), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
             sm: "3",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 114
+                lineNumber: 120
             },
             __self: this
         }, " ", /*#__PURE__*/ _reactDefault.default.createElement("label", {
             className: "userLabel",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 116
+                lineNumber: 122
             },
             __self: this
         }, "Attendee")), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
             sm: "1",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\user-type.js",
-                lineNumber: 118
+                lineNumber: 124
             },
             __self: this
         }))));
@@ -57724,8 +57743,8 @@ class ResearchUpload extends _react.Component {
             loop: true,
             src: "https://assets6.lottiefiles.com/packages/lf20_h59xofz0.json",
             style: {
-                height: "155px",
-                width: "155px"
+                height: "160px",
+                width: "160px"
             },
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
@@ -58072,6 +58091,805 @@ exports.default = WorkShopPresentationUpload;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","reactstrap":"1uGVV","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","@lottiefiles/react-lottie-player":"2kQKQ","axios":"7rA65","../../Stylesheets/research.css":"4aXZb"}],"4aXZb":[function() {},{}]},["1j6wU","2i4nO","7yS0E"], "7yS0E", "parcelRequire9867")
+},{"react":"3b2NM","reactstrap":"1uGVV","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../../Stylesheets/research.css":"4aXZb","@lottiefiles/react-lottie-player":"2kQKQ","axios":"7rA65"}],"4aXZb":[function() {},{}],"4ADjK":[function(require,module,exports) {
+var helpers = require("../../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactStripeCheckout = require("react-stripe-checkout");
+var _reactStripeCheckoutDefault = parcelHelpers.interopDefault(_reactStripeCheckout);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _reactstrap = require("reactstrap");
+var _paymentCss = require("../../Stylesheets/payment.css");
+var _paymentCssDefault = parcelHelpers.interopDefault(_paymentCss);
+var _oleoScriptSwashCaps = require("@fontsource/oleo-script-swash-caps");
+var _reactLottiePlayer = require("@lottiefiles/react-lottie-player");
+function Payment() {
+    async function handleToken(token) {
+        console.log(token);
+        let details = {
+            amount: 500,
+            id: token.id
+        };
+        await _axiosDefault.default.post("http://localhost:5000/stripe/charge", details).then(()=>{
+            alert("Payment Success");
+        }).catch((error)=>{
+            alert(error);
+        });
+    }
+    return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+            lineNumber: 27
+        },
+        __self: this
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Row, {
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+            lineNumber: 28
+        },
+        __self: this
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+        sm: "1",
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+            lineNumber: 29
+        },
+        __self: this
+    }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+        sm: "5",
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+            lineNumber: 30
+        },
+        __self: this
+    }, /*#__PURE__*/ _reactDefault.default.createElement("h2", {
+        className: "paymentTopic",
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+            lineNumber: 31
+        },
+        __self: this
+    }, "Please make registation payment "), /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+        className: "mainTopic",
+        style: {
+            fontFamily: "Oleo Script Swash Caps"
+        },
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+            lineNumber: 33
+        },
+        __self: this
+    }, "Stripe", " "), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+            lineNumber: 39
+        },
+        __self: this
+    }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+            lineNumber: 40
+        },
+        __self: this
+    }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+            lineNumber: 41
+        },
+        __self: this
+    }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+            lineNumber: 42
+        },
+        __self: this
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactStripeCheckoutDefault.default, {
+        stripeKey: "pk_test_51IpQyrFF7EHqc9HHHj1TzKcpG7kg8uN8B7biD7xPeXFZjoi1vcHnKMnqYsW71Z0zqx8OrHeY9Sb4ju3Moj6GbDEt00V0DV3uW2",
+        token: handleToken,
+        className: "paybtn",
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+            lineNumber: 43
+        },
+        __self: this
+    }))), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+        sm: "4",
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+            lineNumber: 50
+        },
+        __self: this
+    }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "imagestyle",
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+            lineNumber: 51
+        },
+        __self: this
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactLottiePlayer.Player, {
+        autoplay: true,
+        loop: true,
+        src: "https://assets10.lottiefiles.com/packages/lf20_yzoqyyqf.json",
+        style: {
+            height: "610px",
+            width: "640px"
+        },
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+            lineNumber: 52
+        },
+        __self: this
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactLottiePlayer.Controls, {
+        visible: false,
+        buttons: [
+            "play",
+            "repeat",
+            "frame",
+            "debug"
+        ],
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+            lineNumber: 58
+        },
+        __self: this
+    })))))));
+}
+_c = Payment;
+exports.default = Payment;
+var _c;
+$RefreshReg$(_c, "Payment");
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","react-stripe-checkout":"7jdvX","axios":"7rA65","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","reactstrap":"1uGVV","../../Stylesheets/payment.css":"4QfrJ","@fontsource/oleo-script-swash-caps":"2q55x","@lottiefiles/react-lottie-player":"2kQKQ"}],"7jdvX":[function(require,module,exports) {
+'use strict';
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var _extends = Object.assign || function(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i];
+        for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+    }
+    return target;
+};
+var _createClass = function() {
+    function defineProperties(target, props) {
+        for(var i = 0; i < props.length; i++){
+            var descriptor = props[i];
+            descriptor.enumerable = descriptor.enumerable || false;
+            descriptor.configurable = true;
+            if ("value" in descriptor) descriptor.writable = true;
+            Object.defineProperty(target, descriptor.key, descriptor);
+        }
+    }
+    return function(Constructor, protoProps, staticProps) {
+        if (protoProps) defineProperties(Constructor.prototype, protoProps);
+        if (staticProps) defineProperties(Constructor, staticProps);
+        return Constructor;
+    };
+}();
+var _react = require('react');
+var _react2 = _interopRequireDefault(_react);
+var _propTypes = require('prop-types');
+var _propTypes2 = _interopRequireDefault(_propTypes);
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        default: obj
+    };
+}
+function _defineProperty(obj, key, value) {
+    if (key in obj) Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+    });
+    else obj[key] = value;
+    return obj;
+}
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+}
+function _possibleConstructorReturn(self, call) {
+    if (!self) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+}
+function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+        constructor: {
+            value: subClass,
+            enumerable: false,
+            writable: true,
+            configurable: true
+        }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+var scriptLoading = false;
+var scriptLoaded = false;
+var scriptDidError = false;
+var ReactStripeCheckout1 = function(_React$Component) {
+    _inherits(ReactStripeCheckout2, _React$Component);
+    function ReactStripeCheckout2(props) {
+        _classCallCheck(this, ReactStripeCheckout2);
+        var _this = _possibleConstructorReturn(this, (ReactStripeCheckout2.__proto__ || Object.getPrototypeOf(ReactStripeCheckout2)).call(this, props));
+        _this.onScriptLoaded = function() {
+            if (!ReactStripeCheckout2.stripeHandler) {
+                ReactStripeCheckout2.stripeHandler = StripeCheckout.configure({
+                    key: _this.props.stripeKey
+                });
+                if (_this.hasPendingClick) _this.showStripeDialog();
+            }
+        };
+        _this.onScriptError = function() {
+            for(var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++)args[_key] = arguments[_key];
+            _this.hideLoadingDialog();
+            if (_this.props.onScriptError) _this.props.onScriptError.apply(_this, args);
+        };
+        _this.onClosed = function() {
+            for(var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++)args[_key2] = arguments[_key2];
+            if (_this._isMounted) _this.setState({
+                open: false
+            });
+            if (_this.props.closed) _this.props.closed.apply(_this, args);
+        };
+        _this.onOpened = function() {
+            for(var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++)args[_key3] = arguments[_key3];
+            _this.setState({
+                open: true
+            });
+            if (_this.props.opened) _this.props.opened.apply(_this, args);
+        };
+        _this.getConfig = function() {
+            return [
+                'token',
+                'image',
+                'name',
+                'description',
+                'amount',
+                'locale',
+                'currency',
+                'panelLabel',
+                'zipCode',
+                'shippingAddress',
+                'billingAddress',
+                'email',
+                'allowRememberMe',
+                'bitcoin',
+                'alipay',
+                'alipayReusable'
+            ].reduce(function(config, key) {
+                return _extends({
+                }, config, _this.props.hasOwnProperty(key) && _defineProperty({
+                }, key, _this.props[key]));
+            }, {
+                opened: _this.onOpened,
+                closed: _this.onClosed
+            });
+        };
+        _this.onClick = function() {
+            // eslint-disable-line react/sort-comp
+            if (_this.props.disabled) return;
+            if (scriptDidError) try {
+                throw new Error('Tried to call onClick, but StripeCheckout failed to load');
+            } catch (x) {
+            } // eslint-disable-line no-empty
+            else if (ReactStripeCheckout2.stripeHandler) _this.showStripeDialog();
+            else {
+                _this.showLoadingDialog();
+                _this.hasPendingClick = true;
+            }
+        };
+        _this.handleOnMouseDown = function() {
+            _this.setState({
+                buttonActive: true
+            });
+        };
+        _this.handleOnMouseUp = function() {
+            _this.setState({
+                buttonActive: false
+            });
+        };
+        _this.state = {
+            open: false,
+            buttonActive: false
+        };
+        return _this;
+    }
+    _createClass(ReactStripeCheckout2, [
+        {
+            key: 'componentDidMount',
+            value: function componentDidMount() {
+                var _this2 = this;
+                this._isMounted = true;
+                if (scriptLoaded) return;
+                if (scriptLoading) return;
+                scriptLoading = true;
+                var script = document.createElement('script');
+                if (typeof this.props.onScriptTagCreated === 'function') this.props.onScriptTagCreated(script);
+                script.src = 'https://checkout.stripe.com/checkout.js';
+                script.async = 1;
+                this.loadPromise = (function() {
+                    var canceled = false;
+                    var promise = new Promise(function(resolve, reject) {
+                        script.onload = function() {
+                            scriptLoaded = true;
+                            scriptLoading = false;
+                            resolve();
+                            _this2.onScriptLoaded();
+                        };
+                        script.onerror = function(event) {
+                            scriptDidError = true;
+                            scriptLoading = false;
+                            reject(event);
+                            _this2.onScriptError(event);
+                        };
+                    });
+                    var wrappedPromise = new Promise(function(accept, cancel) {
+                        promise.then(function() {
+                            return canceled ? cancel({
+                                isCanceled: true
+                            }) : accept();
+                        }); // eslint-disable-line no-confusing-arrow
+                        promise.catch(function(error) {
+                            return canceled ? cancel({
+                                isCanceled: true
+                            }) : cancel(error);
+                        }); // eslint-disable-line no-confusing-arrow
+                    });
+                    return {
+                        promise: wrappedPromise,
+                        cancel: function cancel() {
+                            canceled = true;
+                        }
+                    };
+                })();
+                this.loadPromise.promise.then(this.onScriptLoaded).catch(this.onScriptError);
+                document.body.appendChild(script);
+            }
+        },
+        {
+            key: 'componentDidUpdate',
+            value: function componentDidUpdate() {
+                if (!scriptLoading) this.updateStripeHandler();
+            }
+        },
+        {
+            key: 'componentWillUnmount',
+            value: function componentWillUnmount() {
+                this._isMounted = false;
+                if (this.loadPromise) this.loadPromise.cancel();
+                if (ReactStripeCheckout2.stripeHandler && this.state.open) ReactStripeCheckout2.stripeHandler.close();
+            }
+        },
+        {
+            key: 'updateStripeHandler',
+            value: function updateStripeHandler() {
+                if (!ReactStripeCheckout2.stripeHandler || this.props.reconfigureOnUpdate) ReactStripeCheckout2.stripeHandler = StripeCheckout.configure({
+                    key: this.props.stripeKey
+                });
+            }
+        },
+        {
+            key: 'showLoadingDialog',
+            value: function showLoadingDialog() {
+                if (this.props.showLoadingDialog) {
+                    for(var _len4 = arguments.length, args = Array(_len4), _key4 = 0; _key4 < _len4; _key4++)args[_key4] = arguments[_key4];
+                    this.props.showLoadingDialog.apply(this, args);
+                }
+            }
+        },
+        {
+            key: 'hideLoadingDialog',
+            value: function hideLoadingDialog() {
+                if (this.props.hideLoadingDialog) {
+                    for(var _len5 = arguments.length, args = Array(_len5), _key5 = 0; _key5 < _len5; _key5++)args[_key5] = arguments[_key5];
+                    this.props.hideLoadingDialog.apply(this, args);
+                }
+            }
+        },
+        {
+            key: 'showStripeDialog',
+            value: function showStripeDialog() {
+                this.hideLoadingDialog();
+                ReactStripeCheckout2.stripeHandler.open(this.getConfig());
+            }
+        },
+        {
+            key: 'renderDefaultStripeButton',
+            value: function renderDefaultStripeButton() {
+                return _react2.default.createElement('button', _extends({
+                }, _defineProperty({
+                }, this.props.triggerEvent, this.onClick), {
+                    className: this.props.className,
+                    onMouseDown: this.handleOnMouseDown,
+                    onFocus: this.handleOnMouseDown,
+                    onMouseUp: this.handleOnMouseUp,
+                    onMouseOut: this.handleOnMouseUp,
+                    onBlur: this.handleOnMouseUp,
+                    style: _extends({
+                    }, {
+                        overflow: 'hidden',
+                        display: 'inline-block',
+                        background: 'linear-gradient(#28a0e5,#015e94)',
+                        border: 0,
+                        padding: 1,
+                        textDecoration: 'none',
+                        borderRadius: 5,
+                        boxShadow: '0 1px 0 rgba(0,0,0,0.2)',
+                        cursor: 'pointer',
+                        visibility: 'visible',
+                        userSelect: 'none'
+                    }, this.state.buttonActive && {
+                        background: '#005d93'
+                    }, this.props.style)
+                }), _react2.default.createElement('span', {
+                    style: _extends({
+                    }, {
+                        backgroundImage: 'linear-gradient(#7dc5ee,#008cdd 85%,#30a2e4)',
+                        fontFamily: '"Helvetica Neue",Helvetica,Arial,sans-serif',
+                        fontSize: 14,
+                        position: 'relative',
+                        padding: '0 12px',
+                        display: 'block',
+                        height: 30,
+                        lineHeight: '30px',
+                        color: '#fff',
+                        fontWeight: 'bold',
+                        boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.25)',
+                        textShadow: '0 -1px 0 rgba(0,0,0,0.25)',
+                        borderRadius: 4
+                    }, this.state.buttonActive && {
+                        color: '#eee',
+                        boxShadow: 'inset 0 1px 0 rgba(0,0,0,0.1)',
+                        backgroundImage: 'linear-gradient(#008cdd,#008cdd 85%,#239adf)'
+                    }, this.props.textStyle)
+                }, this.props.label));
+            }
+        },
+        {
+            key: 'renderDisabledButton',
+            value: function renderDisabledButton() {
+                return _react2.default.createElement('button', {
+                    disabled: true,
+                    style: {
+                        background: 'rgba(0,0,0,0.2)',
+                        overflow: 'hidden',
+                        display: 'inline-block',
+                        border: 0,
+                        padding: 1,
+                        textDecoration: 'none',
+                        borderRadius: 5,
+                        userSelect: 'none'
+                    }
+                }, _react2.default.createElement('span', {
+                    style: {
+                        boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.25)',
+                        fontFamily: '"Helvetica Neue",Helvetica,Arial,sans-serif',
+                        fontSize: 14,
+                        position: 'relative',
+                        padding: '0 12px',
+                        display: 'block',
+                        height: 30,
+                        lineHeight: '30px',
+                        borderRadius: 4,
+                        color: '#999',
+                        background: '#f8f9fa',
+                        textShadow: '0 1px 0 rgba(255,255,255,0.5)'
+                    }
+                }, this.props.label));
+            }
+        },
+        {
+            key: 'render',
+            value: function render() {
+                if (this.props.desktopShowModal === true && !this.state.open) this.onClick();
+                else if (this.props.desktopShowModal === false && this.state.open) ReactStripeCheckout2.stripeHandler.close();
+                var ComponentClass = this.props.ComponentClass;
+                if (this.props.children) return _react2.default.createElement(ComponentClass, _extends({
+                }, _defineProperty({
+                }, this.props.triggerEvent, this.onClick), {
+                    children: this.props.children
+                }));
+                return this.props.disabled ? this.renderDisabledButton() : this.renderDefaultStripeButton();
+            }
+        }
+    ]);
+    return ReactStripeCheckout2;
+}(_react2.default.Component);
+ReactStripeCheckout1.defaultProps = {
+    className: 'StripeCheckout',
+    label: 'Pay With Card',
+    locale: 'auto',
+    ComponentClass: 'span',
+    reconfigureOnUpdate: false,
+    triggerEvent: 'onClick'
+};
+ReactStripeCheckout1.propTypes = {
+    // Opens / closes the checkout modal by value
+    // WARNING: does not work on mobile due to browser security restrictions
+    // NOTE: Must be set to false when receiving token to prevent modal from
+    //       opening automatically after closing
+    desktopShowModal: _propTypes2.default.bool,
+    triggerEvent: _propTypes2.default.oneOf([
+        'onClick',
+        'onTouchTap',
+        'onTouchStart'
+    ]),
+    // If included, will render the default blue button with label text.
+    // (Requires including stripe-checkout.css or adding the .styl file
+    // to your pipeline)
+    label: _propTypes2.default.string,
+    // Custom styling for default button
+    style: _propTypes2.default.object,
+    // Custom styling for <span> tag inside default button
+    textStyle: _propTypes2.default.object,
+    // Prevents any events from opening the popup
+    // Adds the disabled prop to the button and adjusts the styling as well
+    disabled: _propTypes2.default.bool,
+    // Named component to wrap button (eg. div)
+    ComponentClass: _propTypes2.default.string,
+    // Show a loading indicator
+    showLoadingDialog: _propTypes2.default.func,
+    // Hide the loading indicator
+    hideLoadingDialog: _propTypes2.default.func,
+    // Run this method when the scrupt fails to load. Will run if the internet
+    // connection is offline when attemting to load the script.
+    onScriptError: _propTypes2.default.func,
+    // Runs when the script tag is created, but before it is added to the DOM
+    onScriptTagCreated: _propTypes2.default.func,
+    // By default, any time the React component is updated, it will call
+    // StripeCheckout.configure, which may result in additional XHR calls to the
+    // stripe API.  If you know the first configuration is all you need, you
+    // can set this to false.  Subsequent updates will affect the StripeCheckout.open
+    // (e.g. different prices)
+    reconfigureOnUpdate: _propTypes2.default.bool,
+    // =====================================================
+    // Required by stripe
+    // see Stripe docs for more info:
+    //   https://stripe.com/docs/checkout#integration-custom
+    // =====================================================
+    // Your publishable key (test or live).
+    // can't use "key" as a prop in react, so have to change the keyname
+    stripeKey: _propTypes2.default.string.isRequired,
+    // The callback to invoke when the Checkout process is complete.
+    //   function(token)
+    //     token is the token object created.
+    //     token.id can be used to create a charge or customer.
+    //     token.email contains the email address entered by the user.
+    token: _propTypes2.default.func.isRequired,
+    // ==========================
+    // Highly Recommended Options
+    // ==========================
+    // Name of the company or website.
+    name: _propTypes2.default.string,
+    // A description of the product or service being purchased.
+    description: _propTypes2.default.string,
+    // A relative URL pointing to a square image of your brand or product. The
+    // recommended minimum size is 128x128px. The recommended image types are
+    // .gif, .jpeg, and .png.
+    image: _propTypes2.default.string,
+    // The amount (in cents) that's shown to the user. Note that you will still
+    // have to explicitly include it when you create a charge using the API.
+    amount: _propTypes2.default.number,
+    // Specify auto to display Checkout in the user's preferred language, if
+    // available. English will be used by default.
+    //
+    // https://stripe.com/docs/checkout#supported-languages
+    // for more info.
+    locale: _propTypes2.default.oneOf([
+        'auto',
+        'zh',
+        'da',
+        'nl',
+        'en',
+        'fr',
+        'de',
+        'it',
+        'ja',
+        'no',
+        'es',
+        'sv'
+    ]),
+    // ==============
+    // Optional Props
+    // ==============
+    // The currency of the amount (3-letter ISO code). The default is USD.
+    currency: _propTypes2.default.oneOf([
+        'AED',
+        'AFN',
+        'ALL',
+        'AMD',
+        'ANG',
+        'AOA',
+        'ARS',
+        'AUD',
+        'AWG',
+        'AZN',
+        'BAM',
+        'BBD',
+        'BDT',
+        'BGN',
+        'BIF',
+        'BMD',
+        'BND',
+        'BOB',
+        'BRL',
+        'BSD',
+        'BWP',
+        'BZD',
+        'CAD',
+        'CDF',
+        'CHF',
+        'CLP',
+        'CNY',
+        'COP',
+        'CRC',
+        'CVE',
+        'CZK',
+        'DJF',
+        'DKK',
+        'DOP',
+        'DZD',
+        'EEK',
+        'EGP',
+        'ETB',
+        'EUR',
+        'FJD',
+        'FKP',
+        'GBP',
+        'GEL',
+        'GIP',
+        'GMD',
+        'GNF',
+        'GTQ',
+        'GYD',
+        'HKD',
+        'HNL',
+        'HRK',
+        'HTG',
+        'HUF',
+        'IDR',
+        'ILS',
+        'INR',
+        'ISK',
+        'JMD',
+        'JPY',
+        'KES',
+        'KGS',
+        'KHR',
+        'KMF',
+        'KRW',
+        'KYD',
+        'KZT',
+        'LAK',
+        'LBP',
+        'LKR',
+        'LRD',
+        'LSL',
+        'LTL',
+        'LVL',
+        'MAD',
+        'MDL',
+        'MGA',
+        'MKD',
+        'MNT',
+        'MOP',
+        'MRO',
+        'MUR',
+        'MVR',
+        'MWK',
+        'MXN',
+        'MYR',
+        'MZN',
+        'NAD',
+        'NGN',
+        'NIO',
+        'NOK',
+        'NPR',
+        'NZD',
+        'PAB',
+        'PEN',
+        'PGK',
+        'PHP',
+        'PKR',
+        'PLN',
+        'PYG',
+        'QAR',
+        'RON',
+        'RSD',
+        'RUB',
+        'RWF',
+        'SAR',
+        'SBD',
+        'SCR',
+        'SEK',
+        'SGD',
+        'SHP',
+        'SLL',
+        'SOS',
+        'SRD',
+        'STD',
+        'SVC',
+        'SZL',
+        'THB',
+        'TJS',
+        'TOP',
+        'TRY',
+        'TTD',
+        'TWD',
+        'TZS',
+        'UAH',
+        'UGX',
+        'USD',
+        'UYU',
+        'UZS',
+        'VND',
+        'VUV',
+        'WST',
+        'XAF',
+        'XCD',
+        'XOF',
+        'XPF',
+        'YER',
+        'ZAR',
+        'ZMW'
+    ]),
+    // The label of the payment button in the Checkout form (e.g. “Subscribe”,
+    // “Pay {{amount}}”, etc.). If you include {{amount}}, it will be replaced
+    // by the provided amount. Otherwise, the amount will be appended to the
+    // end of your label.
+    panelLabel: _propTypes2.default.string,
+    // Specify whether Checkout should validate the billing ZIP code (true or
+    // false)
+    zipCode: _propTypes2.default.bool,
+    // Specify whether Checkout should collect the user's billing address
+    // (true or false). The default is false.
+    billingAddress: _propTypes2.default.bool,
+    // Specify whether Checkout should collect the user's shipping address
+    // (true or false). The default is false.
+    shippingAddress: _propTypes2.default.bool,
+    // Specify whether Checkout should validate the billing ZIP code (true or
+    // false). The default is false.
+    email: _propTypes2.default.string,
+    // Specify whether to include the option to "Remember Me" for future
+    // purchases (true or false). The default is true.
+    allowRememberMe: _propTypes2.default.bool,
+    // Specify whether to accept Bitcoin in Checkout. The default is false.
+    bitcoin: _propTypes2.default.bool,
+    // Specify whether to accept Alipay ('auto', true, or false). The default
+    // is false.
+    alipay: _propTypes2.default.oneOf([
+        'auto',
+        true,
+        false
+    ]),
+    // Specify if you need reusable access to the customer's Alipay account
+    // (true or false). The default is false.
+    alipayReusable: _propTypes2.default.bool,
+    // function() The callback to invoke when Checkout is opened (not supported
+    // in IE6 and IE7).
+    opened: _propTypes2.default.func,
+    // function() The callback to invoke when Checkout is closed (not supported
+    // in IE6 and IE7).
+    closed: _propTypes2.default.func
+};
+ReactStripeCheckout1._isMounted = false;
+exports.default = ReactStripeCheckout1;
+
+},{"react":"3b2NM","prop-types":"4dfy5"}],"4QfrJ":[function() {},{}],"2q55x":[function() {},{}]},["1j6wU","2i4nO","7yS0E"], "7yS0E", "parcelRequire9867")
 
 //# sourceMappingURL=index.1442f259.js.map

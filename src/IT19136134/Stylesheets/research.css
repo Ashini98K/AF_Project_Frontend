@@ -1,8 +1,7 @@
 .imageStyle {
-    width: 155;
-    height: 155px;
+    width: 160;
+    height: 160px;
     margin-top: 2vh;
-    border: 2px solid #A3A3A3;
     box-sizing: border-box;
 }
 

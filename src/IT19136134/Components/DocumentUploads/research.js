@@ -65,7 +65,7 @@ class ResearchUpload extends Component {
                 autoplay
                 loop
                 src="https://assets6.lottiefiles.com/packages/lf20_h59xofz0.json"
-                style={{ height: "155px", width: "155px" }}
+                style={{ height: "160px", width: "160px" }}
               >
                 <Controls
                   visible={false}

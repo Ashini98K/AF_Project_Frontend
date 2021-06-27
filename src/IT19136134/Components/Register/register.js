@@ -105,6 +105,7 @@ class Register extends Component {
                 onChange={this.onChange}
               ></input>
               <input
+                type="email"
                 className="inputfield"
                 placeholder="Email"
                 name="email"
@@ -112,6 +113,7 @@ class Register extends Component {
                 onChange={this.onChange}
               ></input>
               <input
+                type="number"
                 className="inputfield"
                 placeholder="Contact Number"
                 name="contactNo"
