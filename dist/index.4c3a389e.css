@@ -108,6 +108,7 @@
     font-weight: normal;
     font-size: 25px;
     line-height: 41px;
+    border-width: 0pt;
     /* identical to box height */
     text-align: left;
     color: #2B2B2B;
@@ -140,6 +141,7 @@
     line-height: 30px;
     /* identical to box height */
     text-align: center;
+    border-width: 0pt;
 }
 
 .registerButton:hover {
@@ -161,6 +163,7 @@
     line-height: 30px;
     /* identical to box height */
     text-align: center;
+    border-width: 0pt;
 }
 
 .loginbtn:hover {
@@ -239,8 +242,8 @@
     text-align: center;
 }
 .imageStyle {
-    width: 160;
-    height: 160px;
+    width: 155px;
+    height: 155px;
     margin-top: 2vh;
     box-sizing: border-box;
 }
@@ -253,10 +256,11 @@
     /* identical to box height */
     color: #000000;
     margin-left: 50px;
+    padding-top: 25pt;
 }
 
 .researchInput {
-    margin-top: 5vh;
+    margin-top: 4vh;
     width: 900px;
     height: 50px;
     font-family: Roboto;
@@ -266,21 +270,25 @@
     line-height: 40px;
     color: #000000;
     background: #EBE8E8;
+    border-radius: 60px;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-width: 0pt;
 }
 
 .researchtextarea {
-    margin-top: 5vh;
+    margin-top: 4vh;
     width: 900px;
     height: 250px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
-    line-height: 40px;
+    line-height: 50px;
     color: #000000;
     background: #EBE8E8;
+    border-radius: 30px;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-width: 0pt;
 }
 
 .researchfile {
@@ -291,10 +299,13 @@
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
-    line-height: 40px;
+    line-height: 39px;
     color: #000000;
     background: #EBE8E8;
+    border-radius: 60px;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-width: 0pt;
+    margin-bottom: 3pt;
 }
 
 .submitbtn {
@@ -312,6 +323,7 @@
     line-height: 30px;
     /* identical to box height */
     text-align: center;
+    border-width: 0pt;
 }
 
 .submitbtn:hover {

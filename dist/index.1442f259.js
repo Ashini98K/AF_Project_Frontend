@@ -58157,7 +58157,7 @@ function Payment() {
             lineNumber: 31
         },
         __self: this
-    }, "Please make registation payment "), /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+    }, "Please make registration payment "), /*#__PURE__*/ _reactDefault.default.createElement("h3", {
         className: "mainTopic",
         style: {
             fontFamily: "Oleo Script Swash Caps"
