@@ -21857,23 +21857,27 @@ var _workshopPresentation = require("./src/IT19136134/Components/DocumentUploads
 var _workshopPresentationDefault = parcelHelpers.interopDefault(_workshopPresentation);
 var _payment = require("./src/IT19136134/Components/Payment/payment");
 var _paymentDefault = parcelHelpers.interopDefault(_payment);
+var _landingPage = require("./src/IT19136134/Components/LandingPage/landing-page");
+var _landingPageDefault = parcelHelpers.interopDefault(_landingPage);
+var _homePage = require("./src/IT19136134/Components/HomePage/home-page");
+var _homePageDefault = parcelHelpers.interopDefault(_homePage);
 function App() {
     return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
         __source: {
             fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\App.jsx",
-            lineNumber: 12
+            lineNumber: 14
         },
         __self: this
     }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
         __source: {
             fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\App.jsx",
-            lineNumber: 13
+            lineNumber: 15
         },
         __self: this
     }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Switch, {
         __source: {
             fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\App.jsx",
-            lineNumber: 14
+            lineNumber: 17
         },
         __self: this
     }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -21881,7 +21885,7 @@ function App() {
         component: _paymentDefault.default,
         __source: {
             fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\App.jsx",
-            lineNumber: 15
+            lineNumber: 18
         },
         __self: this
     }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -21889,7 +21893,7 @@ function App() {
         component: _workshopPresentationDefault.default,
         __source: {
             fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\App.jsx",
-            lineNumber: 16
+            lineNumber: 19
         },
         __self: this
     }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -21897,7 +21901,7 @@ function App() {
         component: _researchDefault.default,
         __source: {
             fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\App.jsx",
-            lineNumber: 20
+            lineNumber: 23
         },
         __self: this
     }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -21905,15 +21909,23 @@ function App() {
         component: _userTypeDefault.default,
         __source: {
             fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\App.jsx",
-            lineNumber: 21
+            lineNumber: 24
+        },
+        __self: this
+    }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+        path: "/home-page",
+        component: _homePageDefault.default,
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\App.jsx",
+            lineNumber: 25
         },
         __self: this
     }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
         path: "/",
-        component: _registerDefault.default,
+        component: _landingPageDefault.default,
         __source: {
             fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\App.jsx",
-            lineNumber: 22
+            lineNumber: 26
         },
         __self: this
     })))));
@@ -21928,7 +21940,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","react-router-dom":"1PMSK","./src/IT19135830/Login/Login":"7klps","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./src/IT19136134/Components/Register/register":"6X368","./src/IT19136134/Components/Register/user-type":"3jkqu","./src/IT19136134/Components/DocumentUploads/research":"3oHUw","./src/IT19136134/Components/DocumentUploads/workshop-presentation":"1mmh1","./src/IT19136134/Components/Payment/payment":"4ADjK"}],"1PMSK":[function(require,module,exports) {
+},{"react":"3b2NM","react-router-dom":"1PMSK","./src/IT19135830/Login/Login":"7klps","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./src/IT19136134/Components/Register/register":"6X368","./src/IT19136134/Components/Register/user-type":"3jkqu","./src/IT19136134/Components/DocumentUploads/research":"3oHUw","./src/IT19136134/Components/DocumentUploads/workshop-presentation":"1mmh1","./src/IT19136134/Components/Payment/payment":"4ADjK","./src/IT19136134/Components/LandingPage/landing-page":"29Ljb","./src/IT19136134/Components/HomePage/home-page":"5GQPS"}],"1PMSK":[function(require,module,exports) {
 "use strict";
 module.exports = require("./cjs/react-router-dom.js");
 
@@ -48446,7 +48458,7 @@ class Register extends _react.Component {
             this.navigateToUserType(e, this.state.id);
         }).catch((error)=>{
             console.log(error.message);
-            alert(error.message);
+            alert("Please fill the required details");
         });
     }
     navigateToUserType(e, id) {
@@ -48560,6 +48572,7 @@ class Register extends _react.Component {
             placeholder: "Full Name",
             name: "fullName",
             value: this.state.fullName,
+            required: true,
             onChange: this.onChange,
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
@@ -48571,10 +48584,11 @@ class Register extends _react.Component {
             placeholder: "User Name",
             name: "userName",
             value: this.state.userName,
+            required: true,
             onChange: this.onChange,
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
-                lineNumber: 100
+                lineNumber: 101
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement("input", {
@@ -48583,10 +48597,11 @@ class Register extends _react.Component {
             placeholder: "Email",
             name: "email",
             value: this.state.email,
+            required: true,
             onChange: this.onChange,
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
-                lineNumber: 107
+                lineNumber: 109
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement("input", {
@@ -48595,10 +48610,11 @@ class Register extends _react.Component {
             placeholder: "Contact Number",
             name: "contactNo",
             value: this.state.contactNo,
+            required: true,
             onChange: this.onChange,
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
-                lineNumber: 115
+                lineNumber: 118
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement("input", {
@@ -48606,24 +48622,25 @@ class Register extends _react.Component {
             placeholder: "Password",
             name: "password",
             value: this.state.password,
+            required: true,
             onChange: this.onChange,
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
-                lineNumber: 123
+                lineNumber: 127
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement("row", {
             className: "d-flex justify-content-between",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
-                lineNumber: 131
+                lineNumber: 136
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
             sm: "1",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
-                lineNumber: 132
+                lineNumber: 137
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement("a", {
@@ -48631,7 +48648,7 @@ class Register extends _react.Component {
             className: "loginbtn",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
-                lineNumber: 136
+                lineNumber: 141
             },
             __self: this
         }, "Login"), /*#__PURE__*/ _reactDefault.default.createElement("button", {
@@ -48639,7 +48656,7 @@ class Register extends _react.Component {
             className: "registerButton",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Register\\register.js",
-                lineNumber: 145
+                lineNumber: 150
             },
             __self: this
         }, "Register")))))));
@@ -57806,6 +57823,7 @@ class ResearchUpload extends _react.Component {
             name: "tittle",
             value: this.state.tittle,
             onChange: this.onChange,
+            required: true,
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
                 lineNumber: 85
@@ -57817,38 +57835,41 @@ class ResearchUpload extends _react.Component {
             name: "descritpion",
             value: this.state.descritpion,
             onChange: this.onChange,
+            required: true,
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
-                lineNumber: 92
+                lineNumber: 93
             },
             __self: this
         }, this.state.descritpion), /*#__PURE__*/ _reactDefault.default.createElement("row", {
             className: "d-flex justify-content-between",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
-                lineNumber: 101
+                lineNumber: 103
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
-                lineNumber: 102
+                lineNumber: 104
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement("input", {
             type: "file",
             className: "researchfile",
             onChange: this.onFileChange,
+            accept: "application/pdf",
+            required: true,
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
-                lineNumber: 103
+                lineNumber: 105
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement("button", {
             className: "submitbtn",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\research.js",
-                lineNumber: 108
+                lineNumber: 112
             },
             __self: this
         }, "Submit")))))));
@@ -58030,6 +58051,7 @@ class WorkShopPresentationUpload extends _react.Component {
             name: "tittle",
             value: this.state.tittle,
             onChange: this.onChange,
+            required: true,
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\workshop-presentation.js",
                 lineNumber: 85
@@ -58041,38 +58063,41 @@ class WorkShopPresentationUpload extends _react.Component {
             name: "descritpion",
             value: this.state.descritpion,
             onChange: this.onChange,
+            required: true,
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\workshop-presentation.js",
-                lineNumber: 92
+                lineNumber: 93
             },
             __self: this
         }, this.state.descritpion), /*#__PURE__*/ _reactDefault.default.createElement("row", {
             className: "d-flex justify-content-between",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\workshop-presentation.js",
-                lineNumber: 101
+                lineNumber: 103
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\workshop-presentation.js",
-                lineNumber: 102
+                lineNumber: 104
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement("input", {
             type: "file",
             className: "researchfile",
+            accept: "application/vnd.ms-powerpoint , application/vnd.openxmlformats-officedocument.presentationml.presentation",
             onChange: this.onFileChange,
+            required: true,
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\workshop-presentation.js",
-                lineNumber: 103
+                lineNumber: 105
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement("button", {
             className: "submitbtn",
             __source: {
                 fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\DocumentUploads\\workshop-presentation.js",
-                lineNumber: 108
+                lineNumber: 112
             },
             __self: this
         }, "Submit")))))));
@@ -58109,7 +58134,7 @@ function Payment() {
     async function handleToken(token) {
         console.log(token);
         let details = {
-            amount: 500,
+            amount: 5000,
             id: token.id
         };
         await _axiosDefault.default.post("http://localhost:5000/stripe/charge", details).then(()=>{
@@ -58151,7 +58176,14 @@ function Payment() {
             lineNumber: 31
         },
         __self: this
-    }, "Please make registration payment "), /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+    }, "Please make registration payment "), /*#__PURE__*/ _reactDefault.default.createElement("h5", {
+        className: "amountTopic",
+        __source: {
+            fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\Payment\\payment.js",
+            lineNumber: 32
+        },
+        __self: this
+    }, "Amount for attendee : Rs 5000 "), /*#__PURE__*/ _reactDefault.default.createElement("h3", {
         className: "mainTopic",
         style: {
             fontFamily: "Oleo Script Swash Caps"
@@ -58884,6 +58916,283 @@ ReactStripeCheckout1.propTypes = {
 ReactStripeCheckout1._isMounted = false;
 exports.default = ReactStripeCheckout1;
 
-},{"react":"3b2NM","prop-types":"4dfy5"}],"4QfrJ":[function() {},{}],"2q55x":[function() {},{}]},["1j6wU","2i4nO","7yS0E"], "7yS0E", "parcelRequire9867")
+},{"react":"3b2NM","prop-types":"4dfy5"}],"4QfrJ":[function() {},{}],"2q55x":[function() {},{}],"29Ljb":[function(require,module,exports) {
+var helpers = require("../../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactstrap = require("reactstrap");
+var _landingpageCss = require("../../Stylesheets/landingpage.css");
+var _landingpageCssDefault = parcelHelpers.interopDefault(_landingpageCss);
+var _poiretOne = require("@fontsource/poiret-one"); // Defaults to weight 400.
+class LandingPage extends _react.Component {
+    constructor(props){
+        super(props);
+        this.navigateToHomePage = this.navigateToHomePage.bind(this);
+    }
+    navigateToHomePage(e) {
+        window.location = `/home-page`;
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "bngImage",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 18
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            style: {
+                backdropFilter: "blur(5px)"
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 19
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Row, {
+            className: "rowstyle",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 20
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "3",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 21
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            className: "logoBlock",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 22
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "3",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 23
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Row, {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 25
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "3",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 26
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 27
+            },
+            __self: this
+        }, " ", /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            className: "headTopic",
+            style: {
+                fontFamily: "Poiret One"
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 29
+            },
+            __self: this
+        }, "International Conference on Application Frameworks"), /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            className: "headDate",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 32
+            },
+            __self: this
+        }, "2021"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            style: {
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 33
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "viewEvent",
+            onClick: (e)=>this.navigateToHomePage(e)
+            ,
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 40
+            },
+            __self: this
+        }, "View Events"))), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "3",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\LandingPage\\landing-page.js",
+                lineNumber: 48
+            },
+            __self: this
+        })))));
+    }
+}
+exports.default = LandingPage;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","reactstrap":"1uGVV","@fontsource/poiret-one":"2eXfF","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../../Stylesheets/landingpage.css":"X4M9J"}],"2eXfF":[function() {},{}],"X4M9J":[function() {},{}],"5GQPS":[function(require,module,exports) {
+var helpers = require("../../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactstrap = require("reactstrap");
+var _homepageCss = require("../../Stylesheets/homepage.css");
+var _homepageCssDefault = parcelHelpers.interopDefault(_homepageCss);
+var _poiretOne = require("@fontsource/poiret-one"); // Defaults to weight 400.
+class Homepage extends _react.Component {
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 9
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Row, {
+            className: "rowstyle",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 10
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "1",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 11
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 12
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            className: "homeTopic",
+            style: {
+                fontFamily: "Poiret One"
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 13
+            },
+            __self: this
+        }, "International Conference on"), /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            className: "homeTopic",
+            style: {
+                fontFamily: "Poiret One"
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 17
+            },
+            __self: this
+        }, "Application Frameworks"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            style: {
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 20
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "logoSliit",
+            style: {
+                width: "200px",
+                height: "200px"
+            },
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 27
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 35
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+            className: "homeDate",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 36
+            },
+            __self: this
+        }, "3rd, 4th and 5th November 2021"), /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+            className: "homesliit",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 37
+            },
+            __self: this
+        }, "Sri Lanka Institute of Information Technology"), /*#__PURE__*/ _reactDefault.default.createElement("h6", {
+            className: "aboutTopic",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 40
+            },
+            __self: this
+        }, "About Conference"), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            className: "aboutParagragh ",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 41
+            },
+            __self: this
+        }, "The 1st International conference on Application Framework (ICAF) is organized by the Faculty of Computing of the Sri Lanka Institute of Information Technology (SLIIT) as an open forum for academics along with industry professionals to present the latest findings and research output. Primary objective of the ICAF is to uplift the research culture and the quality of research done by Sri Lankan researchers. This conference will create a platform for national and international researchers to showcase their research output, networking opportunities to discuss innovative ideas, and initiate collaborative work.")), /*#__PURE__*/ _reactDefault.default.createElement(_reactstrap.Col, {
+            sm: "1",
+            __source: {
+                fileName: "F:\\SLIIT 3rd Year Sem1\\Application Framework\\Group Project\\AF_Frontend\\AF_Project_Frontend\\src\\IT19136134\\Components\\HomePage\\home-page.js",
+                lineNumber: 54
+            },
+            __self: this
+        }))));
+    }
+}
+exports.default = Homepage;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../../Stylesheets/homepage.css":"7pZJJ","@fontsource/poiret-one":"2eXfF","reactstrap":"1uGVV"}],"7pZJJ":[function() {},{}],"2eXfF":[function() {},{}]},["1j6wU","2i4nO","7yS0E"], "7yS0E", "parcelRequire9867")
 
 //# sourceMappingURL=index.1442f259.js.map

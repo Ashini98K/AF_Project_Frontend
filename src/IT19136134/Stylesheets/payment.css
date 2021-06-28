@@ -8,6 +8,16 @@
     color: #000000;
 }
 
+.amonutTopic {
+    padding-top: 45pt;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 42px;
+    color: #000000;
+}
+
 .mainTopic {
     margin-top: 50pt;
     font-style: normal;

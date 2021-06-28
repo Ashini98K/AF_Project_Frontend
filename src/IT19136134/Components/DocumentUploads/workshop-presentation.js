@@ -88,6 +88,7 @@ class WorkShopPresentationUpload extends Component {
                 name="tittle"
                 value={this.state.tittle}
                 onChange={this.onChange}
+                required
               ></input>
               <textarea
                 className="researchtextarea"
@@ -95,6 +96,7 @@ class WorkShopPresentationUpload extends Component {
                 name="descritpion"
                 value={this.state.descritpion}
                 onChange={this.onChange}
+                required
               >
                 {this.state.descritpion}
               </textarea>
@@ -103,7 +105,9 @@ class WorkShopPresentationUpload extends Component {
                 <input
                   type="file"
                   className="researchfile"
+                  accept="application/vnd.ms-powerpoint , application/vnd.openxmlformats-officedocument.presentationml.presentation"
                   onChange={this.onFileChange}
+                  required
                 ></input>
                 <button className="submitbtn">Submit</button>
               </row>

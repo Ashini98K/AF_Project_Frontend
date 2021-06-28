@@ -1,0 +1,57 @@
+.homeTopic {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 75px;
+    color: black;
+    text-align: center;
+}
+
+.homeDate {
+    font-family: Post No Bills Colombo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 75px;
+    color: black;
+    text-align: center;
+}
+
+.homesliit {
+    font-family: Post No Bills Colombo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 75px;
+    color: black;
+    text-align: center;
+}
+
+.rowstyle {
+    padding-top: 7vh;
+}
+
+.aboutTopic {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    color: orangered;
+    text-align: center;
+}
+
+.aboutParagragh {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    color: black;
+    text-align: center;
+}
+
+.logoSliit {
+    background: url(../images/logo.png) no-repeat center;
+    background-size: fill;
+    background-size: 200px 200px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}

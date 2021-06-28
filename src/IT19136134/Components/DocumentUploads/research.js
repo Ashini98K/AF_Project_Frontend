@@ -88,6 +88,7 @@ class ResearchUpload extends Component {
                 name="tittle"
                 value={this.state.tittle}
                 onChange={this.onChange}
+                required
               ></input>
               <textarea
                 className="researchtextarea"
@@ -95,6 +96,7 @@ class ResearchUpload extends Component {
                 name="descritpion"
                 value={this.state.descritpion}
                 onChange={this.onChange}
+                required
               >
                 {this.state.descritpion}
               </textarea>
@@ -104,6 +106,8 @@ class ResearchUpload extends Component {
                   type="file"
                   className="researchfile"
                   onChange={this.onFileChange}
+                  accept="application/pdf"
+                  required
                 ></input>
                 <button className="submitbtn">Submit</button>
               </row>

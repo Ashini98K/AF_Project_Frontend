@@ -50,7 +50,7 @@ class Register extends Component {
       })
       .catch((error) => {
         console.log(error.message);
-        alert(error.message);
+        alert("Please fill the required details");
       });
   }
 
@@ -95,6 +95,7 @@ class Register extends Component {
                 placeholder="Full Name"
                 name="fullName"
                 value={this.state.fullName}
+                required
                 onChange={this.onChange}
               ></input>
               <input
@@ -102,6 +103,7 @@ class Register extends Component {
                 placeholder="User Name"
                 name="userName"
                 value={this.state.userName}
+                required
                 onChange={this.onChange}
               ></input>
               <input
@@ -110,6 +112,7 @@ class Register extends Component {
                 placeholder="Email"
                 name="email"
                 value={this.state.email}
+                required
                 onChange={this.onChange}
               ></input>
               <input
@@ -118,6 +121,7 @@ class Register extends Component {
                 placeholder="Contact Number"
                 name="contactNo"
                 value={this.state.contactNo}
+                required
                 onChange={this.onChange}
               ></input>
               <input
@@ -125,6 +129,7 @@ class Register extends Component {
                 placeholder="Password"
                 name="password"
                 value={this.state.password}
+                required
                 onChange={this.onChange}
               ></input>
 

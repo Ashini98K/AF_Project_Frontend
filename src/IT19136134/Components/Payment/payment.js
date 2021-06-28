@@ -11,7 +11,7 @@ function Payment() {
     console.log(token);
 
     let details = {
-      amount: 500,
+      amount: 5000,
       id: token.id,
     };
     await axios
@@ -29,7 +29,7 @@ function Payment() {
         <Col sm="1"></Col>
         <Col sm="5">
           <h2 className="paymentTopic">Please make registration payment </h2>
-
+          <h5 className="amountTopic">Amount for attendee : Rs 5000 </h5>
           <h3
             className="mainTopic"
             style={{ fontFamily: "Oleo Script Swash Caps" }}
