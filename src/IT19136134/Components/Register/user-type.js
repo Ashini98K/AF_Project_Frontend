@@ -48,7 +48,7 @@ class UserType extends Component {
       console.log("researcher true");
     } else {
       console.log("attendee true");
-      this.navigateToPayment(e);
+      this.navigateToPayment(e, this.state.id);
     }
   }
 
@@ -61,7 +61,7 @@ class UserType extends Component {
   }
 
   navigateToPayment(e) {
-    window.location = `/payment-gateway`;
+    window.location = `/payment-gateway/${id}`;
   }
 
   render() {

@@ -15,11 +15,13 @@ class ResearchUpload extends Component {
       descritpion: "",
       document: null,
       urlFile: "",
+      status: "PENDING",
+      paymentStatus: "UNPAID",
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.onFileChange = this.onFileChange.bind(this);
-    // this.handleSave = this.handleSave.bind(this);
+    this.handleSave = this.handleSave.bind(this);
   }
 
   componentDidMount() {
@@ -63,6 +65,8 @@ class ResearchUpload extends Component {
       tittle: this.state.tittle,
       description: this.state.descritpion,
       document: this.state.urlFile,
+      status: this.state.status,
+      paymentStatus: this.state.paymentStatus,
     };
 
     console.log(research);

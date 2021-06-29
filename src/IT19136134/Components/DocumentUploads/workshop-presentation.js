@@ -15,6 +15,8 @@ class WorkShopPresentationUpload extends Component {
       descritpion: "",
       document: null,
       urlFile: "",
+      status: "PENDING",
+      paymentStatus: "NULL",
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -57,10 +59,12 @@ class WorkShopPresentationUpload extends Component {
     e.preventDefault();
 
     let presentation = {
-      userId: "60d764d68d4eaa2234244c48",
+      userId: this.state.userId,
       tittle: this.state.tittle,
       description: this.state.descritpion,
       document: this.state.urlFile,
+      status: this.state.status,
+      paymentStatus: this.state.paymentStatus,
     };
 
     console.log(presentation);

@@ -1,9 +1,6 @@
 import React,{Component} from 'react'
 import {Button,Col, Row} from "reactstrap";
-import AddUserCss from '../../Stylesheets/add-user.css';
-import "react-datepicker/dist/react-datepicker.css";
-import TableDatePicker from './DatePicker'
-import TimePicker from 'react-bootstrap-time-picker';
+import AddUserCss from '../../Stylesheets/add-user.css'; 
 import axios from 'axios';
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
