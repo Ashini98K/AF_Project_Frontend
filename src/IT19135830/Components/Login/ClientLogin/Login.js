@@ -56,6 +56,8 @@ class Login extends Component {
                 // localStorage.setItem("Login message", response.data.message);
                 // localStorage.setItem("UserToken", response.data.token);
 
+                localStorage.setItem("UserId", response.data.result._id);
+
                 let userType = response.data.result.type;
 
                 if(userType == 'RESEARCHER'){
@@ -67,6 +69,7 @@ class Login extends Component {
                     this.navigateAttendee(e);
                     localStorage.setItem("Login message", response.data.message);
                     localStorage.setItem("UserToken", response.data.token);
+                    localStorage.setItem("UserId", response.data.data);
                 }
 
 

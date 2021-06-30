@@ -44,16 +44,16 @@ class AdminLogin extends Component {
 
                 let userType = response.data.result.type;
 
-                if(userType == 'research-review'){
-                    this.navigateResearcher(e);
-                    localStorage.setItem("Login message", response.data.message);
-                    localStorage.setItem("UserToken", response.data.token);
-                }
-                else if (userType == 'ATTENDEE'){
-                    this.navigateAttendee(e);
-                    localStorage.setItem("Login message", response.data.message);
-                    localStorage.setItem("UserToken", response.data.token);
-                }
+                // if(userType == 'RESEARCHER'){
+                //     this.navigateResearcher(e);
+                //     localStorage.setItem("Login message", response.data.message);
+                //     localStorage.setItem("UserToken", response.data.token);
+                // }
+                // else if (userType == 'ATTENDEE'){
+                //     this.navigateAttendee(e);
+                //     localStorage.setItem("Login message", response.data.message);
+                //     localStorage.setItem("UserToken", response.data.token);
+                // }
 
 
                 this.navigate(e);

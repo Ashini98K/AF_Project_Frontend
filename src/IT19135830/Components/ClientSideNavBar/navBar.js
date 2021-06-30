@@ -12,6 +12,8 @@ class navBar extends Component {
         this.state = {
             login :'Login',
             userToken : '',
+            click:'Register',
+            user:''
 
         }
 
@@ -19,6 +21,9 @@ class navBar extends Component {
 
     componentDidMount() {
         const token = localStorage.getItem('UserToken');
+        const user = localStorage.getItem('UserId');
+
+        this.state.user = user;
 
         this.state.userToken = token;
 
@@ -32,11 +37,13 @@ class navBar extends Component {
 
         if(token){
             this.state.login='Logout';
+            this.state.click='Profile';
             this.setState(login());
             console.log(this.state.login);
         }
         else {
             this.state.login='Login';
+            this.state.click='Register';
             console.log(this.state.login);
         }
     }
@@ -53,6 +60,15 @@ class navBar extends Component {
 
 
 
+    }
+
+    profile(e, id){
+        if(this.state.click == 'Register'){
+            window.location('/register');
+        }
+        else if(this.state.click == 'Profile') {
+            window.location(`/profile`)
+        }
     }
 
 
@@ -124,10 +140,10 @@ class navBar extends Component {
                                 </li>
                             </ul>
 
-                        <ul className="navbar-nav navTitles">
+                        <ul className="navbar-nav navTitles" onClick={e => this.profile(e, this.state.user)}>
                             <li className="nav-item">
-                                <a className="nav-link navbar-brand active" style={{color:'white'}} href="/register" >
-                                        Register
+                                <a className="nav-link navbar-brand active" style={{color:'white'}} href="/profile" >
+                                    {this.state.click}
                                     </a>
                                 </li>
                             </ul>

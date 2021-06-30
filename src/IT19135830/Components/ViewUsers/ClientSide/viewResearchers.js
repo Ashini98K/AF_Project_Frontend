@@ -13,14 +13,14 @@ class Researchers extends Component {
         this.state = {
             researchers: [],
             submissions:[],
-            userType:"ACCEPTED"
+            status:"ACCEPTED"
         }
 
     }
 
     componentDidMount() {
-        const userType = 'ACCEPTED';
-        axios.get(`http://localhost:5000/users/user-type/${userType}`)
+        const status = 'ACCEPTED';
+        axios.get(`http://localhost:5000/users/presenter/${status}`)
         .then(response => {
             console.log(response.data.data);
             console.log(response.data.info);
@@ -57,7 +57,7 @@ class Researchers extends Component {
                 <Row className='userRow'>
                     <Col sm ='2'></Col>
                     <Col sm ='8'>
-                        <h1 className='userTopic'>Researchers</h1>
+                        <h1 className='userTopic'>Presenters</h1>
                         {/*{this.state.researchers.length > 0 && this.state.researchers.map((item, index) => (*/}
                         {/*    <div key={index}>*/}
                         {/*        <Row>*/}
