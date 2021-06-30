@@ -3,11 +3,14 @@ import { Col, Row } from "reactstrap";
 import home from "../../Stylesheets/homepage.css";
 import "@fontsource/poiret-one"; // Defaults to weight 400.
 import FooterPage from "../Footer/footer-page";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import navBar from '../../../IT19135830/Components/ClientSideNavBar/navBar'
 
 class Homepage extends Component {
   render() {
     return (
       <div>
+        <Route component={navBar}></Route>
         <Row className="rowstyle">
           <Col sm="1"></Col>
           <Col>

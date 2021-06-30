@@ -4,21 +4,41 @@ import AddConferenceStyles from '../Stylesheet/add-conference.css'
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import axios from 'axios'
 
-class conference extends Component {
+class EditConference extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            id: "",
             conference_title: "",
             conference_date: "",
             conference_description: "",
             conference_logo_link: "",
             conference_background_image_link: "",
             conference_annoucement: "",
-            conference_venue: ""
+            conference_venue: "",
+            isEditing: false
         }
-        this.addConferenceDeatils = this.addConferenceDeatils.bind(this)
+        this.updateConferenceDeatils = this.updateConferenceDeatils.bind(this)
         this.onChange = this.onChange.bind(this)
 
+    }
+
+    componentDidMount() {
+        axios.get('http://localhost:5000/conference/get-conference-details').then(
+            res => {
+                console.log(res)
+                this.setState({
+                    id: res.data[0]._id,
+                    conference_title: res.data[0].conference_title,
+                    conference_date: res.data[0].conference_date,
+                    conference_description: res.data[0].conference_description,
+                    conference_logo_link: res.data[0].conference_logo_link,
+                    conference_background_image_link: res.data[0].conference_background_image_link,
+                    conference_annoucement: res.data[0].conference_annoucement,
+                    conference_venue: res.data[0].conference_venue,
+                })
+            }
+        )
     }
 
     onChange(e) {
@@ -27,10 +47,11 @@ class conference extends Component {
         })
     }
 
-    addConferenceDeatils(e) {
+    updateConferenceDeatils(e) {
         e.preventDefault()
         console.log('Sending data to back end')
         var data = {
+            id: this.state.id,
             conference_title: this.state.conference_title,
             conference_date: this.state.conference_date,
             conference_description: this.state.conference_description,
@@ -42,13 +63,14 @@ class conference extends Component {
 
         console.log(data)
 
-        axios.post('http://localhost:5000/conference/add-details', data).then((res) => {
-            console.log("Conference details added sucess fully")
+        axios.put('http://localhost:5000/conference/update-conference-details', data).then((res) => {
+            console.log("Conference details updated sucessfully")
 
             //call the method to navigate to add key speakers page
+
         })
 
-        this.props.history.push('/add-key-speakers')
+
     }
 
     render() {
@@ -77,7 +99,7 @@ class conference extends Component {
                         <h3 className='login'>Add Conference</h3>
                         <h3 className='instructions'>Add conference details here</h3>
 
-                        <form onSubmit={this.addConferenceDeatils}>
+                        <form onSubmit={this.updateConferenceDeatils}>
                             {/*<AiOutlineMail/>*/}
                             {/*<Mail size={25} className='mailIcon'/>*/}
                             <input className='inputfield'
@@ -148,7 +170,7 @@ class conference extends Component {
                                     <span className='btnTxt'>Next</span>
                                 </button>
 
-                                
+
                             </row>
 
                         </form>
@@ -160,4 +182,4 @@ class conference extends Component {
     }
 }
 
-export default conference
+export default EditConference
