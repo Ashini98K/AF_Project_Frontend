@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import {Button,Col, Row} from "reactstrap";
 import axios from 'axios';
+import navBar from "../../ClientSideNavBar/navBar";
 import LoginCss from '../../../Stylesheets/login.css'
 import {Mail} from 'react-feather';
 import login from '../../actions/auth';

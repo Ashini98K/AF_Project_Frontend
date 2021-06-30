@@ -3,24 +3,32 @@ import axios from 'axios';
 import Card from "reactstrap/lib/Card";
 import {Button, Col, Input, Row} from "reactstrap";
 import userCss from '../../../Stylesheets/viewUsers.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import navBar from "../../ClientSideNavBar/navBar";
 
 class Researchers extends Component {
     constructor(props) {
         super(props);
+        this.onClick = this.onClick.bind(this);
         this.state = {
             researchers: [],
-            userType:"RESEARCHER"
+            submissions:[],
+            userType:"ACCEPTED"
         }
 
     }
 
     componentDidMount() {
-        const userType = 'RESEARCHER';
+        const userType = 'ACCEPTED';
         axios.get(`http://localhost:5000/users/user-type/${userType}`)
         .then(response => {
             console.log(response.data.data);
-            this.setState({researchers: response.data.data});
-            console.log(this.state.researchers);
+            console.log(response.data.info);
+
+            this.setState({researchers: response.data.info});
+            this.setState({submissions: response.data.data});
+            //     console.log(this.state.submissions.length)
+            // console.log(this.state.submissions[1].userId)
         }
         )
             .catch(error => {
@@ -29,22 +37,58 @@ class Researchers extends Component {
             )
     }
 
+    onClick(e, id){
+
+        for(let i = 0; i < this.state.submissions.length; i++){
+            let cId = this.state.submissions[i].userId;
+            if(id === cId){
+                console.log(cId);
+                console.log(id);
+                const path = this.state.submissions[i].document;
+                window.open(path);
+            }
+        }
+    }
+
     render() {
         return(
             <div>
+                <Route component={navBar}></Route>
                 <Row className='userRow'>
                     <Col sm ='2'></Col>
                     <Col sm ='8'>
                         <h1 className='userTopic'>Researchers</h1>
-                        {this.state.researchers.length > 0 && this.state.researchers.map((item, index) => (
-                            <div key={index}>
-                                <ul className="list-group list-group-flush">
-                                    <li className="list-group-item">{item.fullName}</li>
-                                    <li className="list-group-item"></li>
+                        {/*{this.state.researchers.length > 0 && this.state.researchers.map((item, index) => (*/}
+                        {/*    <div key={index}>*/}
+                        {/*        <Row>*/}
+                        {/*        <ul className="list-group list-group-flush">*/}
+                        {/*            <li className="list-group-item">{item.fullName}</li>*/}
+                        {/*            <button>hi</button>*/}
 
-                                </ul>
-                            </div>
-                        ))}
+                        {/*        </ul>*/}
+                        {/*        </Row>*/}
+                        {/*    </div>*/}
+                        {/*))}*/}
+
+                        <table className="table">
+                            <tr style={{borderBottom:'transparent'}}>
+                                <th></th>
+                                <th></th>
+
+                            </tr>
+
+
+                            {this.state.researchers.length > 0 && this.state.researchers.map((item, index) => (
+                                <tr key={index} style={{borderBottom:'2px solid #ddd'}} className='rowHover' >
+                                    <td style={{paddingLeft:'2rem'}}>{item.fullName}</td>
+                                    <td><button onClick={(e) => this.onClick(e, item._id)}>hi</button></td>
+
+                                    <hr/> <hr/>
+                                </tr>
+                            ))}
+
+
+                        </table>
 
 
 
