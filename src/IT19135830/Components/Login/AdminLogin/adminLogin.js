@@ -1,9 +1,9 @@
-import React,{Component} from 'react'
-import {Button,Col, Row} from "reactstrap";
+import React, { Component } from 'react'
+import { Button, Col, Row } from "reactstrap";
 import axios from 'axios';
 import navBar from "../../ClientSideNavBar/navBar";
 import LoginCss from '../../../Stylesheets/login.css'
-import {Mail} from 'react-feather';
+import { Mail } from 'react-feather';
 import login from '../../actions/auth';
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
@@ -13,13 +13,13 @@ import { Player, Controls } from '@lottiefiles/react-lottie-player';
 class AdminLogin extends Component {
     constructor(props) {
         super(props);
-        this.onSubmit= this.onSubmit.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
         // this.navigateResearcher = this.navigateResearcher.bind(this);
         // this.navigateAttendee= this.navigateAttendee.bind(this);
-        this.state={
-            email:"",
-            password:"",
+        this.state = {
+            email: "",
+            password: "",
         }
     }
 
@@ -44,6 +44,22 @@ class AdminLogin extends Component {
 
                 let userType = response.data.result.type;
 
+<<<<<<< HEAD
+                if (userType == 'Reviewer') {
+                    this.history.push('/reviwer-dashboard');
+                    localStorage.setItem("Login message", response.data.message);
+                    localStorage.setItem("UserToken", response.data.token);
+                } else if (userType == 'Editor') {
+                    this.history.push('/editor-dashboard');
+                    localStorage.setItem("Login message", response.data.message);
+                    localStorage.setItem("UserToken", response.data.token);
+                }
+                else if (userType == 'Admin') {
+                    this.history.push('/dashboard');
+                    localStorage.setItem("Login message", response.data.message);
+                    localStorage.setItem("UserToken", response.data.token);
+                }
+=======
                 // if(userType == 'RESEARCHER'){
                 //     this.navigateResearcher(e);
                 //     localStorage.setItem("Login message", response.data.message);
@@ -54,6 +70,7 @@ class AdminLogin extends Component {
                 //     localStorage.setItem("Login message", response.data.message);
                 //     localStorage.setItem("UserToken", response.data.token);
                 // }
+>>>>>>> f36199a8e046b2e151d2f32df9ddcbc797af45c1
 
 
                 this.navigate(e);
@@ -66,59 +83,59 @@ class AdminLogin extends Component {
     }
 
 
-    navigate(e){
-        window.location=('/sample1');
+    navigate(e) {
+        window.location = ('/sample1');
     }
 
 
-    onChange(e){
-        this.setState({[e.target.name]:e.target.value});
+    onChange(e) {
+        this.setState({ [e.target.name]: e.target.value });
     }
 
 
 
 
-    render(){
-        return(
-            <div style={{paddingTop:'1rem'}}>
+    render() {
+        return (
+            <div style={{ paddingTop: '1rem' }}>
                 <Row id='mainRow'>
-                    <Col sm ='3'></Col>
-                    <Col sm ='6'>
-                        <h1 className='topic' style={{textAlign: 'center'}}>ICAF</h1>
-                        <h3 className='subTopic' style={{textAlign: 'center'}}>International Conference on Application Frameworks</h3>
+                    <Col sm='3'></Col>
+                    <Col sm='6'>
+                        <h1 className='topic' style={{ textAlign: 'center' }}>ICAF</h1>
+                        <h3 className='subTopic' style={{ textAlign: 'center' }}>International Conference on Application Frameworks</h3>
 
-                        <h3 className='login' style={{textAlign: 'center', paddingTop:'1rem'}}>Admin Login</h3>
-                        <h3 className='instructions' style={{textAlign: 'center'}}>Please enter Email and Password to login</h3>
-                        <form onSubmit={this.onSubmit} style={{textAlign: 'center', paddingTop:'3rem'}}>
+                        <h3 className='login' style={{ textAlign: 'center', paddingTop: '1rem' }}>Admin Login</h3>
+                        <h3 className='instructions' style={{ textAlign: 'center' }}>Please enter Email and Password to login</h3>
+                        <form onSubmit={this.onSubmit} style={{ textAlign: 'center', paddingTop: '3rem' }}>
 
                             {/*input field to enter email*/}
                             <input className='inputfield'
-                                   style={{align: 'center', marginLeft:'0rem'}}
-                                   placeholder='Enter Email here'
-                                   name='email'
-                                   id='email'
-                                   value={this.state.email}
-                                   onChange={this.onChange}
+                                style={{ align: 'center', marginLeft: '0rem' }}
+                                placeholder='Enter Email here'
+                                name='email'
+                                id='email'
+                                value={this.state.email}
+                                onChange={this.onChange}
                             >
 
-                            {/*input field to enter password*/}
+                                {/*input field to enter password*/}
                             </input>
                             <input className='inputfield'
-                                   style={{align: 'center', marginLeft:'0rem'}}
-                                   placeholder='Enter Password here'
-                                   name = 'password'
-                                   id='password'
-                                   value={this.state.password}
-                                   onChange={this.onChange}
-                                   type='password'
+                                style={{ align: 'center', marginLeft: '0rem' }}
+                                placeholder='Enter Password here'
+                                name='password'
+                                id='password'
+                                value={this.state.password}
+                                onChange={this.onChange}
+                                type='password'
                             >
                             </input>
 
-                            <row className='d-flex justify-content-between' style={{align: 'center', marginLeft:'0rem'}}>
+                            <row className='d-flex justify-content-between' style={{ align: 'center', marginLeft: '0rem' }}>
 
                                 {/*Login button*/}
                                 <Col sm='1'></Col>
-                                <button className ='loginbtn'>
+                                <button className='loginbtn'>
                                     <span className='btnTxt'>LOGIN</span>
                                 </button>
                                 <Col sm='1'></Col>
@@ -128,7 +145,7 @@ class AdminLogin extends Component {
 
                         </form>
                     </Col>
-                    <Col sm ='3'></Col>
+                    <Col sm='3'></Col>
                 </Row>
             </div>
         )

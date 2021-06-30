@@ -38,6 +38,7 @@ class conference extends Component {
             conference_background_image_link: this.state.conference_background_image_link,
             conference_annoucement: this.state.conference_annoucement,
             conference_venue: this.state.conference_venue,
+            status: 'PENDING'
         }
 
         console.log(data)
@@ -131,15 +132,6 @@ class conference extends Component {
                             >
                             </input>
 
-
-                            <input className='inputfield'
-                                name="conference_background_image_link"
-                                placeholder='Background image link'
-                                onChange={this.onChange}
-                                value={this.state.conference_background_image_link}
-                            >
-                            </input>
-
                             <row className='d-flex justify-content-between'>
 
                                 <Col sm='4'></Col>
@@ -148,7 +140,7 @@ class conference extends Component {
                                     <span className='btnTxt'>Next</span>
                                 </button>
 
-                                
+
                             </row>
 
                         </form>

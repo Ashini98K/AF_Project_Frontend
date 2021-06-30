@@ -4,7 +4,7 @@ import AddConferenceStyles from '../Stylesheet/add-conference.css'
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import axios from 'axios'
 
-class EditConference extends Component {
+class ApproveConference extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -16,10 +16,12 @@ class EditConference extends Component {
             conference_background_image_link: "",
             conference_annoucement: "",
             conference_venue: "",
+            status: "",
             isEditing: false
         }
         this.updateConferenceDeatils = this.updateConferenceDeatils.bind(this)
-        this.onChange = this.onChange.bind(this)
+        this.onApprove = this.onApprove.bind(this)
+        this.onReject = this.onReject.bind(this)
 
     }
 
@@ -35,9 +37,53 @@ class EditConference extends Component {
                     conference_logo_link: res.data[0].conference_logo_link,
                     conference_annoucement: res.data[0].conference_annoucement,
                     conference_venue: res.data[0].conference_venue,
+
                 })
             }
         )
+    }
+
+    onApprove(e) {
+        e.preventDefault()
+
+        let data = {
+            id: this.state.id,
+            status: "ACCEPTED",
+            to: 'editor.team.icaf@gmail.com',
+            subject: "ICAF conference",
+            message:
+                "The conference is accepted. It is now published on the web"
+                + " \n\n"
+                + "\n\n Best Regards, \n"
+                + " ICAF Admin team"
+        }
+
+        axios.put('http://localhost:5000/conference/approve-conference', data).then(res => {
+            this.props.history.push('/research-review')
+        })
+        //axios call to approve research paper request
+
+    }
+
+    onReject(e) {
+        e.preventDefault()
+
+        let data = {
+            id: this.state.id,
+            status: "REJECTED",
+            to: 'editor.team.icaf@gmail.com',
+            subject: "ICAF Conference",
+            message:
+                "The conference details are not in place to accept \n" +
+                "Please contact administration for more details"
+                + "\n\n Best Regards, \n"
+                + " ICAF Admin team"
+        }
+
+        //axios call to decline research paper request
+        axios.put('http://localhost:5000/conference/reject-conference', data).then(res => {
+            this.props.history.push('/research-review')
+        })
     }
 
     onChange(e) {
@@ -103,7 +149,8 @@ class EditConference extends Component {
                             <input className='inputfield'
                                 name="conference_title"
                                 placeholder='Conference Title'
-                                onChange={this.onChange}
+
+                                disabled
                                 value={this.state.conference_title}
                             >
                             </input>
@@ -113,7 +160,7 @@ class EditConference extends Component {
                             <input className='inputfield'
                                 name="conference_date"
                                 placeholder='Date as text'
-                                onChange={this.onChange}
+                                disabled
                                 value={this.state.conference_date}
                             >
                             </input>
@@ -121,7 +168,7 @@ class EditConference extends Component {
                             <input className='inputfield'
                                 name="conference_venue"
                                 placeholder='Venue'
-                                onChange={this.onChange}
+                                disabled
                                 value={this.state.conference_venue}
                             >
                             </input>
@@ -129,7 +176,7 @@ class EditConference extends Component {
                             <input className='inputfield'
                                 name="conference_description"
                                 placeholder='Description'
-                                onChange={this.onChange}
+                                disabled
                                 value={this.state.conference_description}
                             >
                             </input>
@@ -137,7 +184,7 @@ class EditConference extends Component {
                             <input className='inputfield'
                                 name="conference_annoucement"
                                 placeholder='Annoucment'
-                                onChange={this.onChange}
+                                disabled
                                 value={this.state.conference_annoucement}
                             >
                             </input>
@@ -146,7 +193,7 @@ class EditConference extends Component {
                             <input className='inputfield'
                                 name="conference_logo_link"
                                 placeholder='logo image link'
-                                onChange={this.onChange}
+                                disabled
                                 value={this.state.conference_logo_link}
                             >
                             </input>
@@ -155,8 +202,12 @@ class EditConference extends Component {
 
                                 <Col sm='4'></Col>
 
-                                <button className='nextBtn'>
-                                    <span className='btnTxt'>Next</span>
+                                <button className='nextBtn' onClick={ }>
+                                    <span className='btnTxt'>Approve</span>
+                                </button>
+
+                                <button className='nextBtn' onClick={ }>
+                                    <span className='btnTxt'>Reject</span>
                                 </button>
 
 
@@ -171,4 +222,4 @@ class EditConference extends Component {
     }
 }
 
-export default EditConference
+export default ApproveConference

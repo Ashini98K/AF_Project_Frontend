@@ -54,7 +54,7 @@ class ReviewResearchPaper extends Component {
         }
 
         //axios call to decline research paper request
-        axios.put('/decline-research-paper', data).then(res => {
+        axios.put('http://localhost:5000/reviwer/decline-research-paper', data).then(res => {
             this.props.history.push('/research-review')
         })
     }

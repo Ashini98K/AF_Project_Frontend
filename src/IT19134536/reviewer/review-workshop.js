@@ -69,7 +69,7 @@ class ReviewWorkShopPresenter extends Component {
             to: this.state.email,
             subject: "ICAF Workshop proposal review completion",
             message: "Dear " + this.state.researcher + " \n" +
-                "Your Workshop proposal has been approved for the ICAF conference Congradulations"
+                "Your Workshop proposal has been approved for the ICAF"
                 + " \n\n"
                 + 'Click here to complete payment : http://localhost:1234/'
                 + "\n\n Best Regards, \n"

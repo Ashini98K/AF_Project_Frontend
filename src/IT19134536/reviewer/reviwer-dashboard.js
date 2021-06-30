@@ -3,7 +3,7 @@ import { Col, Row } from "reactstrap";
 import Reviwer from '../Stylesheet/reviwer.css'
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 
-class ReviwerDashboard extends Component {
+class ReviewerDashboard extends Component {
     constructor(props) {
         super(props)
         this.navigateToReserchReviewPage = this.navigateToReserchReviewPage.bind(this)
@@ -11,11 +11,11 @@ class ReviwerDashboard extends Component {
     }
 
     navigateToReserchReviewPage(e) {
-
+        this.props.history.push('/research-review')
     }
 
     navigateToWorkShopPropsalReviewPage(e) {
-
+        this.props.history.push('/work-shop-list')
     }
 
     render() {
@@ -72,4 +72,4 @@ class ReviwerDashboard extends Component {
     }
 }
 
-export default ReviwerDashboard
+export default ReviewerDashboard
