@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 import navbarCss from'../../Stylesheets/navbar.css'
 import decode from "jwt-decode";
+import login from "../actions/auth";
 
 class navBar extends Component {
     constructor(props) {
         super(props);
         this.loginLogoutToggle = this.loginLogoutToggle.bind(this);
-        this.loginClick = this.loginClick.bind(this);
         this.logout = this.logout.bind(this);
 
         this.state = {
-            btn :''
+            login :'Login'
+
         }
 
-        const loginstate = this.state.btn;
     }
 
     componentDidMount() {
@@ -26,27 +26,35 @@ class navBar extends Component {
                 this.logout(e);
             }
         }
+
+        if(token){
+            this.state.login='Logout';
+            this.setState(login());
+            console.log(this.state.login);
+        }
+        else {
+            this.state.login='Login';
+            console.log(this.state.login);
+        }
     }
+
 
     loginLogoutToggle(e) {
         if(localStorage !== null){
-            this.state.btn = "Logout";
+            localStorage.clear();
+            window.location('/');
+            // this.state.L
         }
         else{
             this.state.btn = "Login";
+            console.log("hello");
         }
+
+        console.log(this.state.btn)
 
     }
 
-    loginClick(e){
-        if(localStorage !== null){
-            localStorage.clear();
-            window.location('/');
-        }
-        else{
-            window.location('/');
-        }
-    }
+
 
     logout(e){
         window.location('/');
@@ -54,10 +62,12 @@ class navBar extends Component {
 
 
 
+
     render(){
         return(
             <div>
 
+                {/*navigation bar*/}
                 <nav className="navbar navbar-expand-lg navbar-light " style={{background: 'black',color: '#FFFFFF'}}>
                     <div className=" container-fluid">
                         <div className="collapse navbar-collapse d-flex justify-content-around">
@@ -108,7 +118,7 @@ class navBar extends Component {
                             <ul className="navbar-nav navTitles" onClick={e => this.loginClick(e)}>
                                 <li className="nav-item">
                                     <a className="nav-link navbar-brand active" style={{color:'white'}} href="/user-login"  >
-                                        {this.state.btn}
+                                        {this.state.login}
                                     </a>
                                 </li>
                             </ul>

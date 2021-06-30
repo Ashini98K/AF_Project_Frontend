@@ -41,13 +41,13 @@ class Login extends Component {
 
         const url = axios.create({baseURL:'http://localhost:5000'});
         // url.interceptors.request.use((req) =>{
-        //     if(localStorage.getItem('profile')) {
-        //         req.headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem('profile')).token}`
+        //     if(localStorage.getItem('UserToken')) {
+        //         req.headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem('UserToken')).token}`
         //     }
         // })
-        // console.log(loginForm);
+        console.log(loginForm);
 
-        url.post('http://localhost:5000/user/client-login', loginForm)
+        url.post('/user/client-login', loginForm)
             .then(response => {
                 alert('Login Successful');
                 // console.log(response.data);

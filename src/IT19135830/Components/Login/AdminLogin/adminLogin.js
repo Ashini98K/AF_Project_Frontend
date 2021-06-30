@@ -38,8 +38,8 @@ class AdminLogin extends Component {
                 // console.log(response.data);
                 let data = response.data;
                 console.log(data);
-                // localStorage.setItem("Login message", response.data.message);
-                // localStorage.setItem("UserToken", response.data.token);
+                localStorage.setItem("Login message", response.data.message);
+                localStorage.setItem("UserToken", response.data.token);
 
                 let userType = response.data.result.type;
 
@@ -80,7 +80,7 @@ class AdminLogin extends Component {
     render(){
         return(
             <div style={{paddingTop:'1rem'}}>
-                <Row>
+                <Row id='mainRow'>
                     <Col sm ='3'></Col>
                     <Col sm ='6'>
                         <h1 className='topic' style={{textAlign: 'center'}}>ICAF</h1>
@@ -89,8 +89,8 @@ class AdminLogin extends Component {
                         <h3 className='login' style={{textAlign: 'center', paddingTop:'1rem'}}>Admin Login</h3>
                         <h3 className='instructions' style={{textAlign: 'center'}}>Please enter Email and Password to login</h3>
                         <form onSubmit={this.onSubmit} style={{textAlign: 'center', paddingTop:'3rem'}}>
-                            {/*<AiOutlineMail/>*/}
-                            {/*<Mail size={25} className='mailIcon'/>*/}
+
+                            {/*input field to enter email*/}
                             <input className='inputfield'
                                    style={{align: 'center', marginLeft:'0rem'}}
                                    placeholder='Enter Email here'
@@ -99,8 +99,9 @@ class AdminLogin extends Component {
                                    value={this.state.email}
                                    onChange={this.onChange}
                             >
+
+                            {/*input field to enter password*/}
                             </input>
-                            {/*<Mail size={25}/>*/}
                             <input className='inputfield'
                                    style={{align: 'center', marginLeft:'0rem'}}
                                    placeholder='Enter Password here'
@@ -114,6 +115,7 @@ class AdminLogin extends Component {
 
                             <row className='d-flex justify-content-between' style={{align: 'center', marginLeft:'0rem'}}>
 
+                                {/*Login button*/}
                                 <Col sm='1'></Col>
                                 <button className ='loginbtn'>
                                     <span className='btnTxt'>LOGIN</span>
