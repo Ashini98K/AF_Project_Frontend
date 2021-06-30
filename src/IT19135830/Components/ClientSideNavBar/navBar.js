@@ -10,14 +10,19 @@ class navBar extends Component {
         this.logout = this.logout.bind(this);
 
         this.state = {
-            login :'Login'
+            login :'Login',
+            userToken : '',
 
         }
+
+
 
     }
 
     componentDidMount() {
         const token = localStorage.getItem('UserToken');
+
+        this.state.userToken = token;
 
         if(token){
             const decodedToken = decode(token);
@@ -40,17 +45,15 @@ class navBar extends Component {
 
 
     loginLogoutToggle(e) {
-        if(localStorage !== null){
+        if(this.state.userToken !== null){
             localStorage.clear();
             window.location('/');
-            // this.state.L
         }
         else{
-            this.state.btn = "Login";
-            console.log("hello");
+
         }
 
-        console.log(this.state.btn)
+
 
     }
 
@@ -115,7 +118,7 @@ class navBar extends Component {
                             </ul>
 
 
-                            <ul className="navbar-nav navTitles" onClick={e => this.loginClick(e)}>
+                            <ul className="navbar-nav navTitles" onClick={e => this.loginLogoutToggle(e)}>
                                 <li className="nav-item">
                                     <a className="nav-link navbar-brand active" style={{color:'white'}} href="/user-login"  >
                                         {this.state.login}
