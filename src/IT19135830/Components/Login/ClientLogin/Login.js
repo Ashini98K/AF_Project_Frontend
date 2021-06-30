@@ -21,11 +21,14 @@ class Login extends Component {
             password:"",
         }
 
+
+
     }
     //
     // componentDidMount(){
     //     axios.get('http://localhost:5000)
     // }
+
 
 
 
@@ -35,9 +38,16 @@ class Login extends Component {
             email: this.state.email,
             password: this.state.password
         }
-        // console.log(loginForm);
 
-        axios.post('http://localhost:5000/user/client-login', loginForm)
+        const url = axios.create({baseURL:'http://localhost:5000'});
+        // url.interceptors.request.use((req) =>{
+        //     if(localStorage.getItem('UserToken')) {
+        //         req.headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem('UserToken')).token}`
+        //     }
+        // })
+        console.log(loginForm);
+
+        url.post('/user/client-login', loginForm)
             .then(response => {
                 alert('Login Successful');
                 // console.log(response.data);
@@ -72,7 +82,7 @@ class Login extends Component {
 
 
     navigateResearcher (e){
-        window.location=('/sample');
+        window.location=('/home-page');
     }
 
     navigateAttendee(e){
